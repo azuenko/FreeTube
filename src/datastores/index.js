@@ -7,7 +7,7 @@ if (isElectronMain) {
   const { app } = require('electron')
   const { join } = require('path')
   const userDataPath = app.getPath('userData') // This is based on the user's OS
-  dbPath = (dbName) => join(userDataPath, `${dbName}.db`)
+  dbPath = (dbName) => join(userDataPath, 'db', `${dbName}.db`)
 } else {
   dbPath = (dbName) => `${dbName}.db`
 }
